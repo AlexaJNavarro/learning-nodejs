@@ -7,14 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Lista de usuarios</h1>
+    <h1>Lista de usuarios</h1><br>
+    <a href="/api/v1/user/create">Create</a><br><br>
 
     <% users.forEach((user)=>{ %>
         <%= user.id %>
         <%= user.name %>
         <%= user.age %>
-        <a href="/users/update-users/<%= user.id %>">Update</a>
-        <a href="/users/delete-users/<%= user.id %>">Delete</a>
+        <a href="/api/v1/user/update/<%= user.id %>">Update</a>
+        <a href="/api/v1/user/delete/<%= user.id %>">Delete</a>
         <br>
     <% }) %>
 

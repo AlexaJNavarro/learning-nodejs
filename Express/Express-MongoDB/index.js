@@ -9,6 +9,8 @@ app.set('port', 8082)
 
 app.use(user_middleware.config)
 
+app.use(express.urlencoded({extended:false})) 
+
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname , 'src/views'))
 
